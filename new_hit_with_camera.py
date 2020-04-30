@@ -26,7 +26,7 @@ def search(mat):
 	return False
 
 
-def take_picture(name):
+def process_pic(name):
 	camera = PiCamera()
 	camera.capture('/home/pi/Desktop/mlx90640-library/' + name + '.jpg')
 	camera.close()
@@ -69,7 +69,7 @@ def dynamo_add(name, arr, timestamp):
 
 def main():
 	fifo = open('/var/run/mlx9062x.sock', 'r')
-	for z in range(1):
+	for z in range(20):
 		file = open('temperature.txt', 'w')
 		mat = np.zeros((24, 32))
 
@@ -94,9 +94,9 @@ def main():
 		file.close()
 		if (search(mat)):
 			print("here")
-			now = str(datetime.now())
+			now = str(datetime.now().strftime("%Y_%m_%d_%H_%M_%S"))
 			name = 'temp'
-			take_picture(now)
+			process_pic(now)
 			dynamo_add('temperature', ir, now)
 			# t1 = threading.Thread(name='Upload to dynamo', target=t_add, args=(name, ir,))
 			# t1.setDaemon(True)
