@@ -1,3 +1,5 @@
+// Developed by Pimoroni and Melexis
+// Modified by Hayato Nakamura, 2020
 #include <stdint.h>
 #include <iostream>
 #include <cstring>
