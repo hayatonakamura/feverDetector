@@ -18,11 +18,11 @@ dynamodb = aws.getResource('dynamodb', 'us-east-1')
 s3 = aws.getClient('s3', 'us-east-1')
 rekog = aws.getClient('rekognition', 'us-east-1')
 sns = aws.getClient('sns', 'us-east-1')
-api_key = 'd1bb17dcfeaac03620fceac7865dc2ef'   # REMOVE THIS FROM GITHUB
+api_key = ''   # REMOVE THIS FROM GITHUB
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 city_name = 'New York'
-account_sid = 'ACdbd245cd0690d91e5a1aa5d1cc808a04' # REMOVE THIS FROM GITHUB
-auth_token = '4bd6281095c71b722aee647de07b5408' # REMOVE THIS FROM GITHUB
+account_sid = '' # REMOVE THIS FROM GITHUB
+auth_token = '' # REMOVE THIS FROM GITHUB
 
 def get_temp():
 	complete_url = base_url + "appid=" + api_key + "&q=" + city_name
