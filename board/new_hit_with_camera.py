@@ -20,7 +20,7 @@ def search(mat):
 			window = mat[y:y+3, x:x+3]
 			print(window)
 			print(np.mean(window))
-			if (np.mean(window) > 34 and np.mean(window) < 45):
+			if (np.mean(window) > 36 and np.mean(window) < 45):
 				print("\n\nHIT\n\n")
 				return True
 	return False
